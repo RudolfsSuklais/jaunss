@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
@@ -12,7 +12,19 @@ public class ShowTextScript : MonoBehaviour
     public GameObject inputField;
     public GameObject inputFieldYear;
     public GameObject displayField;
+    public GameObject scrollView;
+    public GameObject character;
+    string Character;
 
+    public void getCharacter(int index)
+    {
+        if (index == 0)
+
+            Character = "balts";
+
+        else
+            Character = "melns";
+    }
     public void getText()
     {
   
@@ -25,14 +37,18 @@ public class ShowTextScript : MonoBehaviour
          
             calculatedYear = 2024 - parsedYear;
 
-            
-            displayField.GetComponent<Text>().text = $"{text}, {calculatedYear}";
+
+            scrollView.GetComponent<Text>().text = $"Name: {text}\nAge:{calculatedYear}" +
+                $"\nCharacter: "+Character;
         }
         else
         {
-            
-            displayField.GetComponent<Text>().text = "Invalid year input.";
+
+            scrollView.GetComponent<Text>().text = "Invalid year input.";
         }
     }
 
+    
+
+    
 }

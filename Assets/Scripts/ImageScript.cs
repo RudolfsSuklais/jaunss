@@ -140,8 +140,8 @@ public class ImageScript : MonoBehaviour
     }
     public void changeImageLeftSocks()
     {
-        currentIndexShirt = (currentIndexShirt - 1 + shirt.Length) % shirt.Length;
-        imageHolderShirt.GetComponent<Image>().sprite = shirt[currentIndexSocks];
+        currentIndexSocks = (currentIndexSocks - 1 + socks.Length) % socks.Length;
+        imageHolderSocks.GetComponent<Image>().sprite = socks[currentIndexSocks];
         imageHolderBadge3.GetComponent<Image>().sprite = spriteArray2[currentIndexSocks];
     }
 
@@ -170,7 +170,7 @@ public class ImageScript : MonoBehaviour
     {
         currentIndexBoots = (currentIndexBoots - 1 + boots.Length) % boots.Length;
         imageHolderBoots.GetComponent<Image>().sprite = boots[currentIndexBoots];
-        imageHolderBadge3.GetComponent<Image>().sprite = spriteArray3[currentIndexBoots];
+        imageHolderBadge4.GetComponent<Image>().sprite = spriteArray3[currentIndexBoots];
     }
 
     public void showBoots(bool value)
