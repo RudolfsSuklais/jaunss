@@ -30,7 +30,7 @@ public class ImageScript : MonoBehaviour
     public GameObject MainCharacter;
     public float width;
     public float height;
-
+    public string selectedCharacter;
 
 
 
@@ -184,11 +184,17 @@ public class ImageScript : MonoBehaviour
     public void changeCharacter(int index)
     {
         if (index == 0)
+        {
             MainCharacter.GetComponent<Image>().sprite = character[0];
+            selectedCharacter = "balts";
 
-        else 
+
+        }
+        else
+        {
             MainCharacter.GetComponent<Image>().sprite = character[1];
-        
+            selectedCharacter = "melns";
+        }
 
     }
 }
